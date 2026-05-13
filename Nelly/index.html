@@ -4,7 +4,7 @@
 <head>
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 
 <body>
@@ -18,12 +18,12 @@
             <h1>Login</h1>
             <label>
                 Email
-                <input type="email" placeholder="example@email.com">
+                <input name="email" type="email" placeholder="example@email.com" required>
             </label>
 
             <label>
                 Password
-                <input type="password">
+                <input name="password" type="password" required>
             </label>
             <button type="submit" class="submit-btn">Login</button>
         </form>
@@ -32,27 +32,27 @@
 
             <label>
                 Email
-                <input type="email" placeholder="example@email.com">
+                <input name="email" type="email" placeholder="example@email.com" required>
             </label>
 
             <label>
                 Password
-                <input type="password">
+                <input name="password" type="password" required>
             </label>
 
             <label>
                 First Name
-                <input type="text" placeholder="John">
+                <input name="fname" type="text" placeholder="John" required>
             </label>
 
             <label>
                 Last Name
-                <input type="text" placeholder="Smith">
+                <input name="lname" type="text" placeholder="Smith" required>
             </label>
 
             <label>
                 Role
-                <select name="Role" id="roles">
+                <select name="role" id="roles">
                     <option value="LECTURER">Lecturer</option>
                     <option value="STUDENT">Student</option>
                     <option value="MANAGER">Manager</option>

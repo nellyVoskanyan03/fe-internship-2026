@@ -1,3 +1,6 @@
+import { SignupDTO } from './dto/signupDTO.js';
+import { LoginDTO } from './dto/loginDTO.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-btn');
@@ -23,7 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             const formId = form.id;
-            alert(`${formId === 'login-form' ? 'Logging in...' : 'Registering...'}`);
+            console.log(formId);
+
+            const formData = new FormData(form);
+            var dto = "";
+            if (formId === 'signup-form') {
+                dto = new SignupDTO(formData);
+            } else {
+                dto = new LoginDTO(formData);
+            }
+            alert(`${dto.email}`);
         });
     });
 });
